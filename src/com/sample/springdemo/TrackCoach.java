@@ -2,25 +2,33 @@ package com.sample.springdemo;
 
 public class TrackCoach implements Coach {
 
-	private FortuneService fortuneService;
+    private FortuneService fortuneService;
 
-	public TrackCoach() {
-		// TODO Auto-generated constructor stub
-	}
+    public TrackCoach() {
+        // TODO Auto-generated constructor stub
+    }
 
-	public TrackCoach(FortuneService fortuneService) {
-		super();
-		this.fortuneService = fortuneService;
-	}
+    public TrackCoach(FortuneService fortuneService) {
+        super();
+        this.fortuneService = fortuneService;
+    }
 
-	@Override
-	public String getDailyWorkout() {
-		return "Run a hard 5k";
-	}
+    @Override
+    public String getDailyWorkout() {
+        return "Run a hard 5k";
+    }
 
-	@Override
-	public String getFortune() {
-		return "Just Do It: " + fortuneService.getFortune();
-	}
+    @Override
+    public String getFortune() {
+        return "Just Do It: " + fortuneService.getFortune();
+    }
+
+    public void initMethod(){
+        System.out.println("TrackCoach: Inside initMethod");
+    }
+
+    public void cleanUpMethod(){
+        System.out.println("TrackCoach: Inside cleanUpMethod");
+    }
 
 }
